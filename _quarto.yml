@@ -1,23 +1,59 @@
 project:
   type: book
+  output-dir: docs
 
-book:
-  title: "bayesian"
-  author: "Jane Doe"
-  date: "8/29/2022"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
-
-bibliography: references.bib
+toc: true
+number-sections: true
+toc-depth: 2
+number-depth: 4
+bibliography: book.bib
+csl: C:/Users/Xinli/Documents/ims.csl
 
 format:
   html:
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+
+book:
+  title: "Bayesian"
+  subtitle: "Notes"
+  author: "Xinli Xiao"
+  date: last-modified
+  crossref:
+    app-prefix: Appendix
+  chapters: 
+    - index.qmd
+    - part: contents/1/notations.qmd
+      chapters: 
+        - contents/1/binom.qmd
+    #     - contents/1/beta.qmd
+    #     - contents/1/geo.qmd
+    #     - contents/1/poisson.qmd
+    #     - contents/1/exp.qmd
+    #     - contents/1/normal.qmd
+    # - part: contents/2/bayes.qmd
+      chapters:
+        - contents/2/prob.qmd
+        - contents/2/bayesthm.qmd
+    # - part: "Part II: R"
+    #   chapters:
+    #     - contents/5/05-.qmd
+    - contents/references.qmd
+  appendices:
+    - contents/app/specialfunctions.qmd
+    # - contents/app/path.qmd
+    # - contents/app/virtenv.qmd
+  sidebar:
+    style: floating
+    border: true
+    search: true
+    collapse-level: 1
+    pinned: false
+  navbar:
+    subtitle: "2022 Fall"
+  page-navigation: true
+
+
+    
 
 
 

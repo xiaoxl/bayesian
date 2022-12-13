@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bayesian",
+    "section": "",
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n[1]\n\n\n\n\n[1] Hoff, P. D. (2009). A first course in bayesian statistical methods. Springer."
+  },
+  {
+    "objectID": "contents/1/notations.html",
+    "href": "contents/1/notations.html",
+    "title": "Distributions",
+    "section": "",
+    "text": "Main references: [1]."
+  },
+  {
+    "objectID": "contents/1/notations.html#notations",
+    "href": "contents/1/notations.html#notations",
+    "title": "Distributions",
+    "section": "Notations",
+    "text": "Notations\n\n\\(Y\\): a random variable\n\\(\\pr\\rdb{Y\\mid\\theta}\\): the probability of \\(Y\\)\n\\(p(y\\mid\\theta)=\\pr\\rdb{Y=y\\mid\\theta}\\): the discrete probability density function\n\\(f(y\\mid\\theta)=\\dfrac{\\dl1}{\\dl1y}\\pr\\rdb{Y\\leq y\\mid\\theta}\\): the continuous probability density function\n\\(\\Exp\\rdb{Y}\\): the expectation of \\(Y\\)\n\\(\\Var\\rdb{Y}\\): the variance of \\(Y\\)"
+  },
+  {
+    "objectID": "contents/1/notations.html#distributions",
+    "href": "contents/1/notations.html#distributions",
+    "title": "Distributions",
+    "section": "Distributions",
+    "text": "Distributions\n\n\\(\\distbinom(n,\\theta)\\): Binomial distribution.\n\\(\\distbeta(\\alpha,\\beta)\\): Beta distribution.\n\\(\\distpois(\\lambda)\\): Poisson distribution.\n\\(\\distgamma(\\lambda)\\): Gamma distribution.\n\\(\\distexp(\\lambda)\\): Exponential distribution.\n\\(\\distnormal(\\mu,\\sigma^2)\\): Nomral distribution."
+  },
+  {
+    "objectID": "contents/1/notations.html#pdfs",
+    "href": "contents/1/notations.html#pdfs",
+    "title": "Distributions",
+    "section": "pdfs",
+    "text": "pdfs\n\n\\(\\displaystyle \\pdfbinom(y, n, \\theta)=\\dbinom{n}{y} \\theta^{y}(1-\\theta)^{n-y}\\).\n\\(\\displaystyle \\pdfbeta(\\theta, \\alpha, \\beta)=\\dfrac{\\Gamma(\\alpha+\\beta)}{\\Gamma(\\alpha)\\Gamma(\\beta)}\\theta^{\\alpha-1}(1-\\theta)^{\\beta-1}\\).\n\\(\\displaystyle \\pdfpois\\)\n\\(\\displaystyle \\pdfgamma\\)\n\\(\\displaystyle \\pdfexp\\)\n\\(\\displaystyle \\pdfnormal\\)\n\n\n\n\n\n[1] Hoff, P. D. (2009). A first course in bayesian statistical methods. Springer."
+  },
+  {
+    "objectID": "contents/1/binom.html",
+    "href": "contents/1/binom.html",
+    "title": "1  Binomial distribution",
+    "section": "",
+    "text": "Constants and basic symbols \\[\n\\newcommand{\\dl}[1]{{\\hspace{#1mu}\\mathrm d}}\n\\newcommand{\\me}{{\\mathrm e}}\n\\]\nProbability \\[\n\\newcommand{\\pr}{\\operatorname{Pr}}\n\\newcommand{\\Exp}{\\operatorname{E}}\n\\newcommand{\\Var}{\\operatorname{Var}}\n\\]\nContainers \\[\n\\newcommand{\\mat}[1]{\\begin{bmatrix}#1\\end{bmatrix}}\n\\newcommand{\\set}[1]{\\left\\{#1\\right\\}}\n\\newcommand{\\sqb}[1]{\\left[#1\\right]}\n\\newcommand{\\rdb}[1]{\\left(#1\\right)}\n\\newcommand{\\pair}[1]{\\left\\langle#1\\right\\rangle}\n\\newcommand{\\abs}[1]{\\left\\lvert#1\\right\\rvert}\n\\]\nDistributions pdf \\[\n\\newcommand{\\pdfbinom}{{\\tt dbinom}}\n\\newcommand{\\pdfbeta}{{\\tt dbeta}}\n\\newcommand{\\pdfpois}{{\\tt dpois}}\n\\newcommand{\\pdfgamma}{{\\tt dgamma}}\n\\newcommand{\\pdfnormal}{{\\tt dnorm}}\n  \\newcommand{\\pdfexp}{{\\tt dexp}}\n\\]\nDistributions \\[\n\\newcommand{\\distbinom}{\\operatorname{B}}\n\\newcommand{\\distbeta}{\\operatorname{Beta}}\n\\newcommand{\\distgamma}{\\operatorname{Gamma}}\n\\newcommand{\\distexp}{\\operatorname{Exp}}\n\\newcommand{\\distpois}{\\operatorname{Pois}}\n\\newcommand{\\distnormal}{\\operatorname{\\mathcal N}}\n\\]\nLet \\(\\mathcal Y=\\set{0,\\ldots,n}\\)."
+  },
+  {
+    "objectID": "contents/1/binom.html#expected-values",
+    "href": "contents/1/binom.html#expected-values",
+    "title": "1  Binomial distribution",
+    "section": "1.1 Expected values",
+    "text": "1.1 Expected values\n\nTheorem 1.1 Let \\(Y\\sim\\distbinom(n,\\theta)\\). Then \\[\n\\Exp\\sqb{Y}=n\\theta.\n\\]\n\n\nProof. \\[\n\\begin{split}\n    \\Exp\\sqb{Y}&=\\sum_{y=0}^n\\dbinom{n}{y}y\\theta^y(1-\\theta)^{n-y}=\\sum_{y=0}^n\\frac{n!}{y!(n-y)!}y\\theta^y(1-\\theta)^{n-y}\\\\\n    &=\\sum_{y=1}^nn\\theta\\frac{(n-1)!}{(y-1)!(n-1-(y-1))!}\\theta^{y-1}(1-\\theta)^{n-y}\\\\\n    &=n\\theta\\sum_{y=0}^{n-1}\\frac{(n-1)!}{y!(n-1-y)!}\\theta^y(1-\\theta)^{n-1-y}\\\\\n    &=n\\theta(\\theta+1-\\theta)^{n-1}=n\\theta.\n\\end{split}\n\\]"
+  },
+  {
+    "objectID": "contents/1/binom.html#variance",
+    "href": "contents/1/binom.html#variance",
+    "title": "1  Binomial distribution",
+    "section": "1.2 Variance",
+    "text": "1.2 Variance\ndd"
+  },
+  {
+    "objectID": "contents/1/beta.html",
+    "href": "contents/1/beta.html",
+    "title": "2  Beta distribution",
+    "section": "",
+    "text": "Constants and basic symbols \\[\n\\newcommand{\\dl}[1]{{\\hspace{#1mu}\\mathrm d}}\n\\newcommand{\\me}{{\\mathrm e}}\n\\]\nProbability \\[\n\\newcommand{\\pr}{\\operatorname{Pr}}\n\\newcommand{\\Exp}{\\operatorname{E}}\n\\newcommand{\\Var}{\\operatorname{Var}}\n\\]\nContainers \\[\n\\newcommand{\\mat}[1]{\\begin{bmatrix}#1\\end{bmatrix}}\n\\newcommand{\\set}[1]{\\left\\{#1\\right\\}}\n\\newcommand{\\sqb}[1]{\\left[#1\\right]}\n\\newcommand{\\rdb}[1]{\\left(#1\\right)}\n\\newcommand{\\pair}[1]{\\left\\langle#1\\right\\rangle}\n\\newcommand{\\abs}[1]{\\left\\lvert#1\\right\\rvert}\n\\]\nDistributions pdf \\[\n\\newcommand{\\pdfbinom}{{\\tt dbinom}}\n\\newcommand{\\pdfbeta}{{\\tt dbeta}}\n\\newcommand{\\pdfpois}{{\\tt dpois}}\n\\newcommand{\\pdfgamma}{{\\tt dgamma}}\n\\newcommand{\\pdfnormal}{{\\tt dnorm}}\n  \\newcommand{\\pdfexp}{{\\tt dexp}}\n\\]\nDistributions \\[\n\\newcommand{\\distbinom}{\\operatorname{B}}\n\\newcommand{\\distbeta}{\\operatorname{Beta}}\n\\newcommand{\\distgamma}{\\operatorname{Gamma}}\n\\newcommand{\\distexp}{\\operatorname{Exp}}\n\\newcommand{\\distpois}{\\operatorname{Pois}}\n\\newcommand{\\distnormal}{\\operatorname{\\mathcal N}}\n\\]\n\\(\\pdfbeta(1,1)\\) is actually uniform."
+  },
+  {
+    "objectID": "contents/1/beta.html#expected-values",
+    "href": "contents/1/beta.html#expected-values",
+    "title": "2  Beta distribution",
+    "section": "2.1 Expected values",
+    "text": "2.1 Expected values\n\nTheorem 2.1 Let \\(\\theta\\sim\\distbeta(\\alpha,\\beta)\\). Then \\(\\Exp\\sqb{\\theta}=\\dfrac{\\alpha}{\\alpha+\\beta}\\).\n\n\nProof. \\[\n\\begin{split}\n    \\Exp\\sqb{\\theta}&=\\int_0^1\\theta\\cdot\\pdfbeta(\\alpha,\\beta)\\dl3\\theta=\\int_0^1\\theta\\cdot c\\cdot\\theta^{\\alpha-1}(1-\\theta)^{\\beta-1}\\dl3\\theta\\\\\n    &=\\int_0^1c\\cdot\\theta^{\\alpha}(1-\\theta)^{\\beta-1}\\dl3\\theta=\\frac{\\Gamma(\\alpha+\\beta)}{\\Gamma(\\alpha)\\Gamma(\\beta)}\\frac{\\Gamma(\\alpha+1)\\Gamma(\\beta)}{\\Gamma(\\alpha++\\beta+1)}\\\\\n    &=\\frac{\\Gamma(\\alpha+1)\\Gamma(\\alpha+\\beta)}{\\Gamma(\\alpha)\\Gamma(\\alpha+\\beta+1)}=\\frac{\\alpha}{\\alpha+\\beta}.\n\\end{split}\n\\]"
+  },
+  {
+    "objectID": "contents/1/beta.html#binomial-and-beta",
+    "href": "contents/1/beta.html#binomial-and-beta",
+    "title": "2  Beta distribution",
+    "section": "2.2 Binomial and Beta",
+    "text": "2.2 Binomial and Beta\nIf the prior distribution is Beta, and the sampling data is binomial, then the posterior is also Beta.\n\nTheorem 2.2 Let the prior distribution for \\(\\theta\\) be \\[\np(\\theta)=\\pdfbeta(\\alpha, \\beta)=c\\,\\theta^{\\alpha-1}(1-\\theta)^{\\beta-1}\n\\] and the sampling data for \\(y\\) be \\[\n\\pr\\rdb{y\\mid\\theta}=\\dbinom{n}{y}\\theta^y(1-\\theta)^{n-y},\n\\] then the posterior distribution is again beta: \\[\np(\\theta\\mid y)=\\pdfbeta(\\alpha+y, \\beta+n-y).\n\\]\n\n\nProof. \\[\n\\begin{split}\n    \\pr\\rdb{\\theta\\mid y}&=\\frac{\\pr\\rdb{y\\mid\\theta}\\pr\\rdb{\\theta}}{\\int_0^1\\pr\\rdb{y\\mid\\theta}\\pr\\rdb{\\theta}\\dl3\\theta}=c\\,\\theta^y(1-\\theta)^{n-y}\\theta^{\\alpha-1}(1-\\theta)^{\\beta-1}\\\\\n    &=c\\,\\theta^{y+\\alpha-1}(1-\\theta)^{n-y+\\beta-1}=\\pdfbeta(\\alpha+y,\\beta+n-y).\n\\end{split}\n\\]"
+  },
+  {
+    "objectID": "contents/1/geo.html",
+    "href": "contents/1/geo.html",
+    "title": "3  geo",
+    "section": "",
+    "text": "The geometric distribution is the number of trials needed to get the first success, i.e., the number of Bernoulli events until a success is observed, such as the first head when flipping a coin. It takes values on the positive integers starting with one (since at least one trial is needed to observe a success). Let \\(\\mathcal Y=\\set{1,2,\\ldots}\\).\n\nDefinition 3.1 \\(Y\\in\\mathcal Y\\) has a if \\[\n\\pr{Y=y\\mid p}={\\tt Geo}(y,p)=p(1-p)^{x-1}.\n\\]"
+  },
+  {
+    "objectID": "contents/1/poisson.html",
+    "href": "contents/1/poisson.html",
+    "title": "4  poisson",
+    "section": "",
+    "text": "Poisson distribution is a discrete probability distribution that expresses the probability of a given number of events occurring in a fixed interval of time or space if these events occur with a known constant mean rate and independently of the time since the last event.\n\nDefinition 4.1 Let \\(\\mathcal Y=\\set{0,1,2,\\ldots}\\). The uncertain quantity \\(Y\\in\\mathcal Y\\) has a (denoted by \\(Y\\sim\\dpoisson(\\theta)\\)) if\n\\[\n\\pr{Y=y\\mid \\theta}=\\dpois(y,\\theta)=\\theta^y\\me^{-\\theta}/y!.\n\\]\n\n\nTheorem 4.1 \nIf \\(Y\\sim \\dpoisson(\\theta)\\), then \\(\\expectation{Y|\\theta}=\\theta\\), \\(\\variance{Y|\\theta}=\\theta\\).\n\n\nProof. \\[\n\\begin{split}\n    \\expectation{Y|\\theta}&=\\sum_{y=0} y\\,\\dpois(y,\\theta)=\\sum_{y=0} y\\,\\frac{\\theta^y\\me^{-\\theta}}{y!}=\\me^{-\\theta}\\sum_{y=1}\\frac{y}{y!}\\theta^{y-1}\\theta\\\\\n    &=\\theta\\me^{-\\theta}\\sum_{y-1=0}\\frac{\\theta^{y-1}}{(y-1)!}=\\theta\\me^{-\\theta}\\me^{\\theta}=\\theta,\\\\\n    \\expectation{Y^2|\\theta}&=\\sum_{y=0} y^2\\,\\dpois(y,\\theta)=\\theta\\me^{-\\theta}\\sum_{y-1=0}\\frac{\\theta^{y-1}}{(y-1)!}y\\\\\n    &=\\theta\\me^{-\\theta}\\left(\\sum_{y-1=0}\\frac{\\theta^{y-1}}{(y-1)!}(y-1)+\\sum_{y-1=0}\\frac{\\theta^{y-1}}{(y-1)!}\\right)\\\\\n     &=\\theta\\me^{-\\theta}\\left(\\theta\\me^{\\theta}+\\me^{\\theta}\\right)=\\theta^2+\\theta,\\\\\n     \\variance{Y|\\theta}&=\\expectation{Y^2|\\theta}-\\expectation{Y|\\theta}^2=\\theta^2+\\theta-\\theta^2=\\theta.\n\\end{split}\n\\]"
+  },
+  {
+    "objectID": "contents/2/bayes.html",
+    "href": "contents/2/bayes.html",
+    "title": "Bayesian Statistics",
+    "section": "",
+    "text": "asdfas"
+  },
+  {
+    "objectID": "contents/2/bayes.html#try",
+    "href": "contents/2/bayes.html#try",
+    "title": "Bayesian Statistics",
+    "section": "try",
+    "text": "try\ndsfa\n\nsdfasdf\nasdfas"
+  },
+  {
+    "objectID": "contents/2/bayesthm.html",
+    "href": "contents/2/bayesthm.html",
+    "title": "8  Bayes’ Theorem",
+    "section": "",
+    "text": "Constants and basic symbols \\[\n\\newcommand{\\dl}[1]{{\\hspace{#1mu}\\mathrm d}}\n\\newcommand{\\me}{{\\mathrm e}}\n\\]\nProbability \\[\n\\newcommand{\\pr}{\\operatorname{Pr}}\n\\newcommand{\\Exp}[1]{\\operatorname{E}\\left[#1\\right]}\n\\newcommand{\\Var}[1]{\\operatorname{Var}\\left[#1\\right]}\n\\]\nContainers \\[\n\\newcommand{\\mat}[1]{\\begin{bmatrix}#1\\end{bmatrix}}\n\\newcommand{\\set}[1]{\\left\\{#1\\right\\}}\n\\newcommand{\\sqb}[1]{\\left[#1\\right]}\n\\newcommand{\\pair}[1]{\\left\\langle#1\\right\\rangle}\n\\newcommand{\\abs}[1]{\\left\\lvert#1\\right\\rvert}\n\\]\nDistributions pdf \\[\n\\newcommand{\\pdfbinom}{{\\tt dbinom}}\n\\newcommand{\\pdfbeta}{{\\tt dbeta}}\n\\newcommand{\\pdfpois}{{\\tt dpois}}\n\\newcommand{\\pdfgamma}{{\\tt dgamma}}\n\\newcommand{\\pdfnormal}{{\\tt dnorm}}\n  \\newcommand{\\pdfexp}{{\\tt dexp}}\n\\]\nDistributions \\[\n\\newcommand{\\distbinom}{\\operatorname{B}}\n\\newcommand{\\distbeta}{\\operatorname{Beta}}\n\\newcommand{\\distgamma}{\\operatorname{Gamma}}\n\\newcommand{\\distexp}{\\operatorname{Exp}}\n\\newcommand{\\distpois}{\\operatorname{Pois}}\n\\newcommand{\\distnormal}{\\operatorname{\\mathcal N}}\n\\]"
+  },
+  {
+    "objectID": "contents/2/bayesthm.html#conditional-continuous-distributions",
+    "href": "contents/2/bayesthm.html#conditional-continuous-distributions",
+    "title": "8  Bayes’ Theorem",
+    "section": "8.1 Conditional continuous distributions",
+    "text": "8.1 Conditional continuous distributions\n\nDefinition 8.1 (Marginal probability density function) Given two continous random variables \\(X\\) and \\(Y\\) whose joint distribution is known, then the marginal probability density function is the integration of the joint probability distribution over \\(Y\\) and vice versa. That is \\[\nf_X(x)=\\int_c^df(x,y)\\dl3y,\\quad f_Y(y)=\\int_a^bf(x,y)\\dl3x.\n\\]\n\n\nDefinition 8.2 (Conditional Continous Distributions) Let \\(X\\) and \\(Y\\) be two random variables. The conditional probability density function of \\(Y\\) given the occurrence of the value \\(x\\) of \\(X\\) is written as \\[\nf_{Y\\mid X}(y\\mid x)=\\frac{f_{X,Y}(x,y)}{f_X(x)}\n\\] where \\(f_{X,Y}(x,y)\\) gives the joint density of \\(X\\) and \\(Y\\) while \\(f_X(x)\\) gives the marginal density of \\(X\\)."
+  },
+  {
+    "objectID": "contents/references.html",
+    "href": "contents/references.html",
+    "title": "References",
+    "section": "",
+    "text": "[1] Hoff, P. D.\n(2009). A first course in bayesian statistical methods.\nSpringer."
+  },
+  {
+    "objectID": "contents/app/specialfunctions.html",
+    "href": "contents/app/specialfunctions.html",
+    "title": "Appendix A — Special functions",
+    "section": "",
+    "text": "Constants and basic symbols \\[\n\\newcommand{\\dl}[1]{{\\hspace{#1mu}\\mathrm d}}\n\\newcommand{\\me}{{\\mathrm e}}\n\\]\nProbability \\[\n\\newcommand{\\pr}{\\operatorname{Pr}}\n\\newcommand{\\Exp}{\\operatorname{E}}\n\\newcommand{\\Var}{\\operatorname{Var}}\n\\]\nContainers \\[\n\\newcommand{\\mat}[1]{\\begin{bmatrix}#1\\end{bmatrix}}\n\\newcommand{\\set}[1]{\\left\\{#1\\right\\}}\n\\newcommand{\\sqb}[1]{\\left[#1\\right]}\n\\newcommand{\\rdb}[1]{\\left(#1\\right)}\n\\newcommand{\\pair}[1]{\\left\\langle#1\\right\\rangle}\n\\newcommand{\\abs}[1]{\\left\\lvert#1\\right\\rvert}\n\\]\nDistributions pdf \\[\n\\newcommand{\\pdfbinom}{{\\tt dbinom}}\n\\newcommand{\\pdfbeta}{{\\tt dbeta}}\n\\newcommand{\\pdfpois}{{\\tt dpois}}\n\\newcommand{\\pdfgamma}{{\\tt dgamma}}\n\\newcommand{\\pdfnormal}{{\\tt dnorm}}\n  \\newcommand{\\pdfexp}{{\\tt dexp}}\n\\]\nDistributions \\[\n\\newcommand{\\distbinom}{\\operatorname{B}}\n\\newcommand{\\distbeta}{\\operatorname{Beta}}\n\\newcommand{\\distgamma}{\\operatorname{Gamma}}\n\\newcommand{\\distexp}{\\operatorname{Exp}}\n\\newcommand{\\distpois}{\\operatorname{Pois}}\n\\newcommand{\\distnormal}{\\operatorname{\\mathcal N}}\n\\]"
+  },
+  {
+    "objectID": "contents/app/specialfunctions.html#gamma-functions",
+    "href": "contents/app/specialfunctions.html#gamma-functions",
+    "title": "Appendix A — Special functions",
+    "section": "A.1 Gamma functions",
+    "text": "A.1 Gamma functions\n\nDefinition A.1 (Gamma function) Let \\(z\\) be any complex number that \\(\\mathfrak R(z)>0\\). Then \\[\n\\Gamma(z)=\\int_0^{\\infty}t^{z-1}\\me^{-t}\\dl3t.\n\\tag{A.1}\\]\n\n\nTheorem A.1 \\[\n\\Gamma(z+1)=z\\Gamma(z).\n\\tag{A.2}\\]\n\n\nProof. \\[\n\\begin{split}\n    \\Gamma(z+1)&=\\int_0^{\\infty}t^{z+1-1}\\me^{-t}\\dl3t=-\\int_0^{\\infty}t^{z+1-1}\\dl3\\me^{-t}\\\\\n    &=-t\\me^{-t}\\biggr\\rvert_0^{\\infty}+\\int_0^{\\infty}\\me^{-t}\\dl3t^{z}=\\int_0^{\\infty}zt^{z-1}\\me^{-t}\\dl3t=z\\Gamma(z).\n\\end{split}\n\\]"
+  },
+  {
+    "objectID": "contents/app/specialfunctions.html#beta-functions",
+    "href": "contents/app/specialfunctions.html#beta-functions",
+    "title": "Appendix A — Special functions",
+    "section": "A.2 Beta functions",
+    "text": "A.2 Beta functions\n\nDefinition A.2 (Beta function) Let \\(z_1\\), \\(z_2\\) be two complex numbers that \\(\\mathfrak R(z_1),\\mathfrak R(z_2)>0\\). Then \\[\nB(z_1,z_2)=\\int_0^1t^{z_1-1}(1-t)^{z_2-1}\\dl3t.\n\\tag{A.3}\\]\n\n\nTheorem A.2 (Relations between Beta functions and Gamma functions) \\[\n\\Gamma(\\alpha)\\Gamma(\\beta)=\\Gamma(\\alpha+\\beta)B(\\alpha, \\beta).\n\\tag{A.4}\\]\n\n\nProof. Use the following trick to change a product of two integrals into a double integral. \\[\n\\begin{align}\n\\Gamma(\\alpha)\\Gamma(\\beta)&=\\int_0^{\\infty}u^{\\alpha-1}\\me^{-u}\\dl3u\\int_0^{\\infty}v^{\\beta-1}\\me^{-v}\\dl3v\\\\\n&=\\int_0^{\\infty}\\int_0^{\\infty}u^{\\alpha-1}v^{\\beta-1}\\me^{-u-v}\\dl3u\\dl3v.\n\\end{align}\n\\]\nSet \\(u=st\\), \\(v=s-st\\). Then \\(s=u+v\\), \\(t=\\dfrac{u}{u+v}\\), and \\(\\abs{\\dfrac{\\partial(u,v)}{\\partial(s,t)}}=\\abs{\\mat{t&s\\\\1-t&-s}}=s\\). Then \\[\\begin{split}\n    \\Gamma(\\alpha)\\Gamma(\\beta)&=\\int_0^{\\infty}\\int_0^{\\infty}u^{\\alpha-1}v^{\\beta-1}\\me^{-u-v}\\dl3u\\dl3v\\\\\n    &=\\int_{v=0}^{v=\\infty}\\int_{u=0}^{u=\\infty}(st)^{\\alpha-1}(s(1-t))^{\\beta-1}\\me^{-s}s\\dl3s\\dl3t\\\\\n    &=\\int_{t=0}^{t=1}\\int_{s=0}^{s=\\infty}s^{\\alpha+\\beta-1}t^{\\alpha-1}(1-t)^{\\beta-1}\\me^{-s}\\dl3s\\dl3t\\\\\n    &=\\int_{0}^{\\infty}s^{\\alpha+\\beta-1}\\me^{-s}\\dl3s\\int_{0}^{1}t^{\\alpha-1}(1-t)^{\\beta-1}\\dl3t\\\\\n    &=\\Gamma(\\alpha+\\beta)B(\\alpha,\\beta).\n\\end{split}\\]"
+  },
+  {
+    "objectID": "contents/2/prob.html",
+    "href": "contents/2/prob.html",
+    "title": "7  Probability theory",
+    "section": "",
+    "text": "Constants and basic symbols \\[\n\\newcommand{\\dl}[1]{{\\hspace{#1mu}\\mathrm d}}\n\\newcommand{\\me}{{\\mathrm e}}\n\\]\nProbability \\[\n\\newcommand{\\pr}{\\operatorname{Pr}}\n\\newcommand{\\Exp}{\\operatorname{E}}\n\\newcommand{\\Var}{\\operatorname{Var}}\n\\]\nContainers \\[\n\\newcommand{\\mat}[1]{\\begin{bmatrix}#1\\end{bmatrix}}\n\\newcommand{\\set}[1]{\\left\\{#1\\right\\}}\n\\newcommand{\\sqb}[1]{\\left[#1\\right]}\n\\newcommand{\\rdb}[1]{\\left(#1\\right)}\n\\newcommand{\\pair}[1]{\\left\\langle#1\\right\\rangle}\n\\newcommand{\\abs}[1]{\\left\\lvert#1\\right\\rvert}\n\\]\nDistributions pdf \\[\n\\newcommand{\\pdfbinom}{{\\tt dbinom}}\n\\newcommand{\\pdfbeta}{{\\tt dbeta}}\n\\newcommand{\\pdfpois}{{\\tt dpois}}\n\\newcommand{\\pdfgamma}{{\\tt dgamma}}\n\\newcommand{\\pdfnormal}{{\\tt dnorm}}\n  \\newcommand{\\pdfexp}{{\\tt dexp}}\n\\]\nDistributions \\[\n\\newcommand{\\distbinom}{\\operatorname{B}}\n\\newcommand{\\distbeta}{\\operatorname{Beta}}\n\\newcommand{\\distgamma}{\\operatorname{Gamma}}\n\\newcommand{\\distexp}{\\operatorname{Exp}}\n\\newcommand{\\distpois}{\\operatorname{Pois}}\n\\newcommand{\\distnormal}{\\operatorname{\\mathcal N}}\n\\]"
+  },
+  {
+    "objectID": "contents/2/prob.html#joint-distribution",
+    "href": "contents/2/prob.html#joint-distribution",
+    "title": "7  Probability theory",
+    "section": "7.1 joint distribution",
+    "text": "7.1 joint distribution\n\\(\\distbeta(a,b)\\)"
+  },
+  {
+    "objectID": "contents/2/prob.html#section",
+    "href": "contents/2/prob.html#section",
+    "title": "7  Probability theory",
+    "section": "7.2 ",
+    "text": "7.2 \n\nTheorem 7.1 \\[\nf_{X\\mid Y=y}(x)=\\frac{f_{Y\\mid X=x}(y\\mid x)f_X(x)}{f_Y(y)}\n\\]\n\n\n\n\n\n\n\nNote\n\n\n\n\\(f_{X\\mid Y}(x\\mid y)\\) is a pdf w.r.t \\(X\\), not a pdf w.r.t \\(Y\\)."
+  }
+]

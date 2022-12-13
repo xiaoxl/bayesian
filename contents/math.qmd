@@ -1,0 +1,46 @@
+
+
+::: {.hidden}
+Constants and basic symbols
+$$
+ \newcommand{\dl}[1]{{\hspace{#1mu}\mathrm d}}
+ \newcommand{\me}{{\mathrm e}}
+$$
+
+Probability
+$$
+ \newcommand{\pr}{\operatorname{Pr}}
+ \newcommand{\Exp}{\operatorname{E}}
+ \newcommand{\Var}{\operatorname{Var}}
+$$
+
+Containers
+$$
+ \newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+ \newcommand{\set}[1]{\left\{#1\right\}}
+ \newcommand{\sqb}[1]{\left[#1\right]}
+ \newcommand{\rdb}[1]{\left(#1\right)}
+ \newcommand{\pair}[1]{\left\langle#1\right\rangle}
+ \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+$$
+
+Distributions pdf
+$$
+ \newcommand{\pdfbinom}{{\tt dbinom}}
+ \newcommand{\pdfbeta}{{\tt dbeta}}
+ \newcommand{\pdfpois}{{\tt dpois}}
+ \newcommand{\pdfgamma}{{\tt dgamma}}
+ \newcommand{\pdfnormal}{{\tt dnorm}}
+  \newcommand{\pdfexp}{{\tt dexp}}
+$$
+
+Distributions
+$$
+ \newcommand{\distbinom}{\operatorname{B}}
+ \newcommand{\distbeta}{\operatorname{Beta}}
+ \newcommand{\distgamma}{\operatorname{Gamma}}
+ \newcommand{\distexp}{\operatorname{Exp}}
+ \newcommand{\distpois}{\operatorname{Pois}}
+ \newcommand{\distnormal}{\operatorname{\mathcal N}}
+$$
+:::
