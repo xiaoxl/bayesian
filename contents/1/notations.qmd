@@ -3,7 +3,8 @@
 Main references: @Hof2009.
 
 
-<!-- {{< include ../math.qmd >}} -->
+{{< include ../math.qmd >}}
+
 
 ## Notations
 - $Y$: a random variable
@@ -28,3 +29,4 @@ Main references: @Hof2009.
 - $\displaystyle \pdfgamma$
 - $\displaystyle \pdfexp$
 - $\displaystyle \pdfnormal$
+

@@ -11,17 +11,23 @@ csl: C:/Users/Xinli/Documents/ims.csl
 
 format:
   html:
-    theme: cosmo
-
+    theme: [cosmo, theme.scss]
+    page-layout: article
+crossref:
+  appendix-title: "Appendix "
+  appendix-delim: ":"
 book:
   title: "Bayesian"
   subtitle: "Notes"
+  description: "Homepage Spring 2023."
   author: "Xinli Xiao"
   date: last-modified
-  crossref:
-    app-prefix: Appendix
   chapters: 
     - index.qmd
+    - part: contents/0/rv.qmd
+      chapters:
+          - contents/0/prob.qmd 
+          - contents/0/rv1.qmd
     - part: contents/1/notations.qmd
       chapters: 
         - contents/1/binom.qmd
@@ -30,30 +36,32 @@ book:
     #     - contents/1/poisson.qmd
     #     - contents/1/exp.qmd
     #     - contents/1/normal.qmd
-    # - part: contents/2/bayes.qmd
+    - part: contents/2/bayes.qmd
       chapters:
-        - contents/2/prob.qmd
         - contents/2/bayesthm.qmd
-    # - part: "Part II: R"
-    #   chapters:
-    #     - contents/5/05-.qmd
     - contents/references.qmd
   appendices:
     - contents/app/specialfunctions.qmd
-    # - contents/app/path.qmd
-    # - contents/app/virtenv.qmd
   sidebar:
-    style: floating
+    # background: "#D9E3E4"
     border: true
     search: true
     collapse-level: 1
-    pinned: false
-  navbar:
-    subtitle: "2022 Fall"
+    pinned: true
+    # style: docked
+    align: center
+    tools:
+      - icon: github
+        text: Source Code
+        href: https://github.com/xiaoxl/bayesian
+  # navbar:
+  #   subtitle: "2022 Fall"
+  #   pinned: false
   page-navigation: true
 
 
-    
+
+
 
 
 

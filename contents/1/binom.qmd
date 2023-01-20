@@ -1,9 +1,6 @@
 # Binomial distribution
 
 
-<!-- {{< include ../math.qmd >}} -->
-
-
 
 Let $\mathcal Y=\set{0,\ldots,n}$.
 

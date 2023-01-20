@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.179">
+<meta name="generator" content="quarto-1.2.269">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content="Homepage Spring 2023.">
 
-<title>Bayesian - 3&nbsp; geo</title>
+<title>Bayesian - 2&nbsp; dis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,14 +25,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../contents/1/poisson.html" rel="next">
-<link href="../../contents/1/beta.html" rel="prev">
+<link href="../../contents/1/notations.html" rel="next">
+<link href="../../contents/0/prob.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -42,11 +42,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -61,27 +61,16 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Bayesian</span>
-    </a>
-  </div>
-          <div id="quarto-search" class="" title="Search"></div>
-      </div> <!-- /container-fluid -->
-    </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">geo</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">dis</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -89,9 +78,17 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Bayesian</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/xiaoxl/bayesian" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -106,7 +103,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../contents/1/notations.html" class="sidebar-item-text sidebar-link">Distributions</a>
+            <a href="../../contents/0/rv.html" class="sidebar-item-text sidebar-link">Random variables</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -114,39 +111,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/1/binom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  <a href="../../contents/0/prob.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Probability theory</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/1/beta.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beta distribution</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/1/geo.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">geo</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/1/poisson.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">poisson</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/1/exp.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">exp</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../contents/1/normal.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">normal</span></a>
+  <a href="../../contents/0/rv1.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">dis</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../contents/2/bayes.html" class="sidebar-item-text sidebar-link">Bayesian Statistics</a>
+            <a href="../../contents/1/notations.html" class="sidebar-item-text sidebar-link">Distributions</a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -154,12 +131,22 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/2/prob.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Probability theory</span></a>
+  <a href="../../contents/1/binom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../contents/2/bayes.html" class="sidebar-item-text sidebar-link">Bayesian Statistics</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/2/bayesthm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></a>
+  <a href="../../contents/2/bayesthm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></a>
   </div>
 </li>
       </ul>
@@ -171,12 +158,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">Appendices</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">Appendices</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../contents/app/specialfunctions.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Special functions</span></a>
@@ -196,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">geo</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">dis</span></h1>
 </div>
 
 
@@ -204,53 +191,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
 
 </header>
 
-<div class="hidden">
-<p>Constants and basic symbols <span class="math display">\[
-\newcommand{\dl}[1]{{\hspace{#1mu}\mathrm d}}
-\newcommand{\me}{{\mathrm e}}
-\]</span></p>
-<p>Probability <span class="math display">\[
-\newcommand{\pr}{\operatorname{Pr}}
-\newcommand{\Exp}{\operatorname{E}}
-\newcommand{\Var}{\operatorname{Var}}
-\]</span></p>
-<p>Containers <span class="math display">\[
-\newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
-\newcommand{\set}[1]{\left\{#1\right\}}
-\newcommand{\sqb}[1]{\left[#1\right]}
-\newcommand{\rdb}[1]{\left(#1\right)}
-\newcommand{\pair}[1]{\left\langle#1\right\rangle}
-\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
-\]</span></p>
-<p>Distributions pdf <span class="math display">\[
-\newcommand{\pdfbinom}{{\tt dbinom}}
-\newcommand{\pdfbeta}{{\tt dbeta}}
-\newcommand{\pdfpois}{{\tt dpois}}
-\newcommand{\pdfgamma}{{\tt dgamma}}
-\newcommand{\pdfnormal}{{\tt dnorm}}
-  \newcommand{\pdfexp}{{\tt dexp}}
-\]</span></p>
-<p>Distributions <span class="math display">\[
-\newcommand{\distbinom}{\operatorname{B}}
-\newcommand{\distbeta}{\operatorname{Beta}}
-\newcommand{\distgamma}{\operatorname{Gamma}}
-\newcommand{\distexp}{\operatorname{Exp}}
-\newcommand{\distpois}{\operatorname{Pois}}
-\newcommand{\distnormal}{\operatorname{\mathcal N}}
-\]</span></p>
-</div>
-<p>The geometric distribution is the number of trials needed to get the first success, i.e., the number of Bernoulli events until a success is observed, such as the first head when flipping a coin. It takes values on the positive integers starting with one (since at least one trial is needed to observe a success). Let <span class="math inline">\(\mathcal Y=\set{1,2,\ldots}\)</span>.</p>
-<div id="def-dist-geo" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.1 </strong></span><span class="math inline">\(Y\in\mathcal Y\)</span> has a if <span class="math display">\[
-\pr{Y=y\mid p}={\tt Geo}(y,p)=p(1-p)^{x-1}.
-\]</span></p>
-</div>
 
 
 
@@ -296,7 +243,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -332,36 +296,54 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../contents/1/beta.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Beta distribution</span></span>
+      <a href="../../contents/0/prob.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Probability theory</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../contents/1/poisson.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">poisson</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../contents/1/notations.html" class="pagination-link">
+        <span class="nav-page-text">Distributions</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

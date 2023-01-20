@@ -1,8 +1,6 @@
 # Beta distribution
 
 
-{{< include ../math.qmd >}}
-
 
 
 ::: {#def-distribution-beta}

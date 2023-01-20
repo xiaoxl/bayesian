@@ -4,7 +4,6 @@
 {{< include ../math.qmd >}}
 
 
-
 ## Gamma functions
 
 ::: {#def-gamma-function}
@@ -62,7 +61,7 @@ $$
 \end{align}
 $$
 
-Set $u=st$, $v=s-st$. Then $s=u+v$, $t=\dfrac{u}{u+v}$, and $\abs{\dfrac{\partial(u,v)}{\partial(s,t)}}=\abs{\mat{t&s\\1-t&-s}}=s$. Then
+Set $u=st$, $v=s-st$. Then $s=u+v$, $t=\dfrac{u}{u+v}$, and $\abs{\dfrac{\partial(u,v)}{\partial(s,t)}}=\abs{\mqty[t&s\\1-t&-s]}=s$. Then
 $$\begin{split}
     \Gamma(\alpha)\Gamma(\beta)&=\int_0^{\infty}\int_0^{\infty}u^{\alpha-1}v^{\beta-1}\me^{-u-v}\dl3u\dl3v\\
     &=\int_{v=0}^{v=\infty}\int_{u=0}^{u=\infty}(st)^{\alpha-1}(s(1-t))^{\beta-1}\me^{-s}s\dl3s\dl3t\\

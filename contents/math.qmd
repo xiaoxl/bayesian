@@ -3,25 +3,18 @@
 ::: {.hidden}
 Constants and basic symbols
 $$
+\require{physics}
+\require{braket}
+$$
+$$
  \newcommand{\dl}[1]{{\hspace{#1mu}\mathrm d}}
  \newcommand{\me}{{\mathrm e}}
 $$
 
 Probability
 $$
- \newcommand{\pr}{\operatorname{Pr}}
  \newcommand{\Exp}{\operatorname{E}}
  \newcommand{\Var}{\operatorname{Var}}
-$$
-
-Containers
-$$
- \newcommand{\mat}[1]{\begin{bmatrix}#1\end{bmatrix}}
- \newcommand{\set}[1]{\left\{#1\right\}}
- \newcommand{\sqb}[1]{\left[#1\right]}
- \newcommand{\rdb}[1]{\left(#1\right)}
- \newcommand{\pair}[1]{\left\langle#1\right\rangle}
- \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
 $$
 
 Distributions pdf
