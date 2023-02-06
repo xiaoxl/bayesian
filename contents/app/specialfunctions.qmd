@@ -1,7 +1,6 @@
 # Special functions
 
 
-{{< include ../math.qmd >}}
 
 
 ## Gamma functions

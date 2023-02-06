@@ -13,6 +13,7 @@ format:
   html:
     theme: [cosmo, theme.scss]
     page-layout: article
+    include-before-body: contents/math.qmd
 crossref:
   appendix-title: "Appendix "
   appendix-delim: ":"
@@ -27,6 +28,7 @@ book:
     - part: contents/0/rv.qmd
       chapters:
           - contents/0/prob.qmd 
+          - contents/0/inferences.qmd
           - contents/0/rv1.qmd
     - part: contents/1/notations.qmd
       chapters: 

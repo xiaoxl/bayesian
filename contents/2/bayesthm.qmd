@@ -1,7 +1,6 @@
 # Bayes' Theorem
 
 
-{{< include ../math.qmd >}}
 
 
 ## Conditional continuous distributions

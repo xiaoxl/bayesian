@@ -1,6 +1,5 @@
 
 
-{{< include ../math.qmd >}}
 
 
 # Probability theory
@@ -167,48 +166,6 @@ $$
 :::
 
 
-### Sample mean and sample variance
-
-Let $X$ be a random variable, with mean $\mu$ and variance $\sigma^2$. We would like to take $N$ samples. Let $X_i$ be the random variable of the $i$th outcome. Then all $X_i$'s are i.i.d. Therefore $\Exp\qty(X_i)=\mu$, and $\Var\qty(X_i)=\sigma^2$ for any $i=1,\ldots, N$.
-
-Consider the following random functions:
-
-- $\bar{\mu}=\dfrac1N\sum_{i=1}^NX_i$,
-- $\bar{\sigma}^2=\dfrac{1}{N-1}\sum_{i=1}^N(X_i-\bar{\mu})^2$.
-
-
-::: {#lem-}
-
-1. $\Exp(\bar{\mu})=\mu$.
-2. $\Exp(\bar{\sigma}^2)=\sigma^2$.
-:::
-
-
-::: {.proof}
-$$
-\begin{aligned}
-\Exp\qty(\bar{\mu})&=\Exp\qty(\frac1N\sum_{i=1}^NX_i)=\frac1N\sum_{i=1}^N\Exp\qty(X_i)=\frac1N\sum_{i=1}^N\mu=\mu,\\
-\Exp\qty(\bar{\sigma}^2)&=\frac{1}{N-1}\Exp\qty[\sum_{i=1}^N(X_i-\bar{\mu})^2]=\frac{1}{N-1}\sum_{i=1}^N\Exp\mqty[\qty(X_i-\bar{\mu})^2]\\
-&=\frac{1}{N-1}\sum_{i=1}^N\qty(\Var\qty(X_i-\bar{\mu})+\qty(\Exp\qty(X_i-\bar{\mu}))^2)\\
-&=\frac{1}{N-1}\sum_{i=1}^N\qty(\Var\qty(\frac{N-1}{N}X_i-\frac1NX_1-\ldots-\frac1NX_N)+\qty(\Exp\qty(X_i)-\Exp\qty(\bar{\mu}))^2)\\
-&=\frac{1}{N-1}\sum_{i=1}^N\qty(\frac{(N-1)^2}{N^2}\Var\qty(X_i)+\frac1{N^2}\Var\qty(X_1)+\ldots+\frac1{N^2}\Var\qty(X_N))\\
-&=\frac{1}{N-1}\sum_{i=1}^N\qty(\frac{(N-1)^2}{N^2}\sigma^2+\frac1{N^2}\sigma^2+\ldots+\frac1{N^2}\sigma^2)\\
-&=\frac{N}{N-1}\frac{(N-1)^2+N-1}{N^2}\sigma^2=\sigma^2.
-\end{aligned}
-$$
-:::
-
-
-::: {#def-}
-1. $\bar{\mu}=\dfrac1N\sum_{i=1}^NX_i$ is called the *sample mean* of the samples. 
-2. $\bar{\sigma}^2=\dfrac{1}{N-1}\sum_{i=1}^N(X_i-\bar{\mu})^2$ is called the *sample variance* of the samples.
-:::
-
-
-::: {.callout-caution}
-Please pay attention to the denominator of the sample variance. The $N-1$ is due to the degree of freedom: all $X_i$'s and $\bar{\mu}$ are not independent to each other.
-:::
-
 ## Maximal likelihood estimation
 Consider the Bayes' Theorem 
 
@@ -302,26 +259,6 @@ $f_{X\mid Y}(x\mid y)$ is a pdf w.r.t $X$, not a pdf w.r.t $Y$.
 
 
 
-```{python}
-#| panel: input
-1+1
-```
-
-```{python}
-#| panel: input
-1+1
-```
-
-```{python}
-#| panel: input
-1+1
-```
-
-```{python}
-#| panel: input
-1+1
-2+2
-```
 
 ::: {.cell-output-stdout}
 ```
@@ -332,8 +269,3 @@ $f_{X\mid Y}(x\mid y)$ is a pdf w.r.t $X$, not a pdf w.r.t $Y$.
 ```
 :::
 
-
-
-```{python}
-1+1
-```

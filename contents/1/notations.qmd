@@ -3,7 +3,6 @@
 Main references: @Hof2009.
 
 
-{{< include ../math.qmd >}}
 
 
 ## Notations
