@@ -2,6 +2,7 @@
 
 
 
+{{< include ../../math.qmd >}}
 
 ::: {#def-distribution-beta}
 ## Beta distribution

@@ -13,7 +13,7 @@ format:
   html:
     theme: [cosmo, theme.scss]
     page-layout: article
-    include-before-body: contents/math.qmd
+    # include-before-body: contents/math.qmd
 crossref:
   appendix-title: "Appendix "
   appendix-delim: ":"
@@ -32,12 +32,13 @@ book:
           - contents/0/rv1.qmd
     - part: contents/1/notations.qmd
       chapters: 
-        - contents/1/binom.qmd
-    #     - contents/1/beta.qmd
-    #     - contents/1/geo.qmd
-    #     - contents/1/poisson.qmd
-    #     - contents/1/exp.qmd
-    #     - contents/1/normal.qmd
+        - contents/1/dist/binom.qmd
+    #     - contents/1/dist/beta.qmd
+    #     - contents/1/dist/geo.qmd
+        - contents/1/dist/poisson.qmd
+        - contents/1/dist/gamma.qmd
+    #     - contents/1/dist/exp.qmd
+    #     - contents/1/dist/normal.qmd
     - part: contents/2/bayes.qmd
       chapters:
         - contents/2/bayesthm.qmd

@@ -137,7 +137,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/1/binom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  <a href="../../contents/1/dist/binom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/1/dist/poisson.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Poisson distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/1/dist/gamma.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gamma distribution</span></a>
   </div>
 </li>
       </ul>
@@ -152,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/2/bayesthm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></a>
+  <a href="../../contents/2/bayesthm.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></a>
   </div>
 </li>
       </ul>
@@ -215,31 +225,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <div class="hidden">
-<p>Constants and basic symbols <span class="math display">\[
+<!-- Constants and basic symbols -->
+<p><span class="math display">\[
 \require{physics}
 \require{braket}
-\]</span> <span class="math display">\[
+\]</span></p>
+<p><span class="math display">\[
 \newcommand{\dl}[1]{{\hspace{#1mu}\mathrm d}}
 \newcommand{\me}{{\mathrm e}}
 \]</span></p>
-<p>Probability <span class="math display">\[
+<!-- Probability -->
+<p><span class="math display">\[
 \newcommand{\Exp}{\operatorname{E}}
 \newcommand{\Var}{\operatorname{Var}}
+\newcommand{\Mode}{\operatorname{mode}}
 \]</span></p>
-<p>Distributions pdf <span class="math display">\[
-\newcommand{\pdfbinom}{{\tt dbinom}}
-\newcommand{\pdfbeta}{{\tt dbeta}}
-\newcommand{\pdfpois}{{\tt dpois}}
-\newcommand{\pdfgamma}{{\tt dgamma}}
-\newcommand{\pdfnormal}{{\tt dnorm}}
-  \newcommand{\pdfexp}{{\tt dexp}}
+<!-- Distributions pdf -->
+<p><span class="math display">\[
+\newcommand{\pdfbinom}{{\tt binom}}
+\newcommand{\pdfbeta}{{\tt beta}}
+\newcommand{\pdfpois}{{\tt poisson}}
+\newcommand{\pdfgamma}{{\tt gamma}}
+\newcommand{\pdfnormal}{{\tt norm}}
+  \newcommand{\pdfexp}{{\tt expon}}
 \]</span></p>
-<p>Distributions <span class="math display">\[
+<!-- Distributions -->
+<p><span class="math display">\[
 \newcommand{\distbinom}{\operatorname{B}}
 \newcommand{\distbeta}{\operatorname{Beta}}
 \newcommand{\distgamma}{\operatorname{Gamma}}
 \newcommand{\distexp}{\operatorname{Exp}}
-\newcommand{\distpois}{\operatorname{Pois}}
+\newcommand{\distpois}{\operatorname{Poisson}}
 \newcommand{\distnormal}{\operatorname{\mathcal N}}
 \]</span></p>
 </div>
