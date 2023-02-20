@@ -8,7 +8,7 @@
 
 <meta name="description" content="Homepage Spring 2023.">
 
-<title>Bayesian - 4&nbsp; Bayes’ Theorem</title>
+<title>Bayesian - 7&nbsp; Bayes’ Theorem</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -117,7 +117,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/0/rv1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">dis</span></a>
+  <a href="../../contents/0/inferences.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Inferences</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/0/rv1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">dis</span></a>
   </div>
 </li>
       </ul>
@@ -132,7 +137,17 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/1/binom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  <a href="../../contents/1/dist/binom.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Binomial distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/1/dist/poisson.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Poisson distribution</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../contents/1/dist/gamma.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Gamma distribution</span></a>
   </div>
 </li>
       </ul>
@@ -147,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../contents/2/bayesthm.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></a>
+  <a href="../../contents/2/bayesthm.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></a>
   </div>
 </li>
       </ul>
@@ -181,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul class="collapse">
-  <li><a href="#conditional-continuous-distributions" id="toc-conditional-continuous-distributions" class="nav-link active" data-scroll-target="#conditional-continuous-distributions"><span class="toc-section-number">4.1</span>  Conditional continuous distributions</a></li>
+  <li><a href="#conditional-continuous-distributions" id="toc-conditional-continuous-distributions" class="nav-link active" data-scroll-target="#conditional-continuous-distributions"><span class="toc-section-number">7.1</span>  Conditional continuous distributions</a></li>
   </ul>
 </nav>
     </div>
@@ -190,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bayes’ Theorem</span></h1>
 </div>
 
 
@@ -205,44 +220,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="hidden">
-<p>Constants and basic symbols <span class="math display">\[
-\require{physics}
-\require{braket}
-\]</span> <span class="math display">\[
-\newcommand{\dl}[1]{{\hspace{#1mu}\mathrm d}}
-\newcommand{\me}{{\mathrm e}}
-\]</span></p>
-<p>Probability <span class="math display">\[
-\newcommand{\Exp}{\operatorname{E}}
-\newcommand{\Var}{\operatorname{Var}}
-\]</span></p>
-<p>Distributions pdf <span class="math display">\[
-\newcommand{\pdfbinom}{{\tt dbinom}}
-\newcommand{\pdfbeta}{{\tt dbeta}}
-\newcommand{\pdfpois}{{\tt dpois}}
-\newcommand{\pdfgamma}{{\tt dgamma}}
-\newcommand{\pdfnormal}{{\tt dnorm}}
-  \newcommand{\pdfexp}{{\tt dexp}}
-\]</span></p>
-<p>Distributions <span class="math display">\[
-\newcommand{\distbinom}{\operatorname{B}}
-\newcommand{\distbeta}{\operatorname{Beta}}
-\newcommand{\distgamma}{\operatorname{Gamma}}
-\newcommand{\distexp}{\operatorname{Exp}}
-\newcommand{\distpois}{\operatorname{Pois}}
-\newcommand{\distnormal}{\operatorname{\mathcal N}}
-\]</span></p>
-</div>
-<section id="conditional-continuous-distributions" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="conditional-continuous-distributions"><span class="header-section-number">4.1</span> Conditional continuous distributions</h2>
+<section id="conditional-continuous-distributions" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="conditional-continuous-distributions"><span class="header-section-number">7.1</span> Conditional continuous distributions</h2>
 <div id="def-marginaldensity" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4.1 (Marginal probability density function) </strong></span>Given two continous random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> whose joint distribution is known, then the <em>marginal probability density function</em> is the integration of the joint probability distribution over <span class="math inline">\(Y\)</span> and vice versa. That is <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 7.1 (Marginal probability density function) </strong></span>Given two continous random variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> whose joint distribution is known, then the <em>marginal probability density function</em> is the integration of the joint probability distribution over <span class="math inline">\(Y\)</span> and vice versa. That is <span class="math display">\[
 f_X(x)=\int_c^df(x,y)\dl3y,\quad f_Y(y)=\int_a^bf(x,y)\dl3x.
 \]</span></p>
 </div>
 <div id="def-continousdist" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4.2 (Conditional Continous Distributions) </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two random variables. The conditional probability density function of <span class="math inline">\(Y\)</span> given the occurrence of the value <span class="math inline">\(x\)</span> of <span class="math inline">\(X\)</span> is written as <span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 7.2 (Conditional Continous Distributions) </strong></span>Let <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> be two random variables. The conditional probability density function of <span class="math inline">\(Y\)</span> given the occurrence of the value <span class="math inline">\(x\)</span> of <span class="math inline">\(X\)</span> is written as <span class="math display">\[
 f_{Y\mid X}(y\mid x)=\frac{f_{X,Y}(x,y)}{f_X(x)}
 \]</span> where <span class="math inline">\(f_{X,Y}(x,y)\)</span> gives the joint density of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> while <span class="math inline">\(f_X(x)\)</span> gives the marginal density of <span class="math inline">\(X\)</span>.</p>
 </div>
