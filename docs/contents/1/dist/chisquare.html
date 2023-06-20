@@ -8,7 +8,7 @@
 
 <meta name="description" content="Homepage Spring 2023.">
 
-<title>Bayesian - 8&nbsp; Gamma distribution</title>
+<title>Bayesian - 6&nbsp; Chi-square distribution</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../../">
-<link href="../../../contents/1/dist/normal.html" rel="next">
-<link href="../../../contents/1/dist/poisson.html" rel="prev">
+<link href="../../../contents/1/dist/poisson.html" rel="next">
+<link href="../../../contents/1/dist/beta.html" rel="prev">
 <script src="../../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -101,8 +67,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -115,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../contents/1/notations.html">Distributions</a></li><li class="breadcrumb-item"><a href="../../../contents/1/dist/gamma.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gamma distribution</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../../contents/1/notations.html">Distributions</a></li><li class="breadcrumb-item"><a href="../../../contents/1/dist/chisquare.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chi-square distribution</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -201,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../contents/1/dist/chisquare.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../contents/1/dist/chisquare.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chi-square distribution</span></span></a>
   </div>
 </li>
@@ -213,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../contents/1/dist/gamma.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../contents/1/dist/gamma.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gamma distribution</span></span></a>
   </div>
 </li>
@@ -278,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Gamma distribution</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chi-square distribution</span></h1>
 </div>
 
 
@@ -293,132 +257,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="hidden">
-<!-- Constants and basic symbols -->
-<p><span class="math display">\[
-\require{physics}
-\require{braket}
-\]</span></p>
-<p><span class="math display">\[
-\newcommand{\dl}[1]{{\hspace{#1mu}\mathrm d}}
-\newcommand{\me}{{\mathrm e}}
-\]</span></p>
-<!-- Probability -->
-<p><span class="math display">\[
-\newcommand{\Exp}{\operatorname{E}}
-\newcommand{\Var}{\operatorname{Var}}
-\newcommand{\Mode}{\operatorname{mode}}
-\]</span></p>
-<!-- Distributions pdf -->
-<p><span class="math display">\[
-\newcommand{\pdfbinom}{{\tt binom}}
-\newcommand{\pdfbeta}{{\tt beta}}
-\newcommand{\pdfpois}{{\tt poisson}}
-\newcommand{\pdfgamma}{{\tt gamma}}
-\newcommand{\pdfnormal}{{\tt norm}}
-  \newcommand{\pdfexp}{{\tt expon}}
-\]</span></p>
-<!-- Distributions -->
-<p><span class="math display">\[
-\newcommand{\distbinom}{\operatorname{B}}
-\newcommand{\distbeta}{\operatorname{Beta}}
-\newcommand{\distgamma}{\operatorname{Gamma}}
-\newcommand{\distexp}{\operatorname{Exp}}
-\newcommand{\distpois}{\operatorname{Poisson}}
-\newcommand{\distnormal}{\operatorname{\mathcal N}}
-\]</span></p>
-</div>
-<div id="def-dist-gamma" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8.1 </strong></span>Let <span class="math inline">\(\mathcal Y=\set{0,1,2,\ldots}\)</span>. The uncertain quantity <span class="math inline">\(Y\in\mathcal Y\)</span> has a (denoted by <span class="math inline">\(Y\sim\distgamma(a,b)\)</span> or <span class="math inline">\(Y\sim\Gamma(a,b)\)</span>) if <span class="math display">\[
-\Pr\qty(Y=\theta\mid a,b)=\pdfgamma(\theta,a, b)=\dfrac{b^a}{\Gamma(a)}\theta^{a-1}\me^{-b\theta},\quad \text{for }\theta,a,b&gt;0.
-\]</span></p>
-<p>Here</p>
-<ul>
-<li><span class="math inline">\(a\)</span> is the <strong>shape</strong>.</li>
-<li><span class="math inline">\(b\)</span> is the <strong>rate</strong>, which also represents <strong>effective sample size</strong>.</li>
-<li><span class="math inline">\(\lambda=\frac1b\)</span> is the <strong>scale</strong>.</li>
-</ul>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Python code
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>rv <span class="op">=</span> gamma(a<span class="op">=</span><span class="dv">20</span>, scale<span class="op">=</span><span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.plot(rv.pdf(np.arange(<span class="dv">100</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<p><img src="gamma_files/figure-html/cell-2-output-1.png" width="588" height="411"></p>
-</div>
-</div>
-<div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rv.interval(<span class="fl">.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>(6.108259792701973, 14.835426785792794)</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="thm-dist-poisson-exp" class="theorem">
-<p><span class="theorem-title"><strong>Theorem 8.1 </strong></span>If <span class="math inline">\(Y\sim \distgamma(a, b)\)</span>, then</p>
-<ul>
-<li><span class="math inline">\(\Exp\qty[Y\mid a, b]=a/b\)</span>,</li>
-<li><span class="math inline">\(\Var\qty[Y\mid a, b]=a/b^2\)</span>,</li>
-<li><span class="math inline">\(\Mode\qty[Y\mid a, b]=\)</span></li>
-</ul>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Proof
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[
-\begin{split}
-\Exp\qty[Y\mid a,b]&amp;= \int_{0}^{\infty}\theta\frac{b^a}{\Gamma(a)}\theta^{a-1}\me^{-b\theta}\dl3\theta\\
-&amp;=\int_{0}^{\infty}\frac{b^a}{\Gamma(a)}\theta^{(a+1)-1}\me^{-b\theta}\dl3\theta\\
-&amp;=\int_{0}^{\infty}\frac{\Gamma(a+1)}{b\Gamma(a)}\frac{b^{a+1}}{\Gamma(a+1)}\theta^{(a+1)-1}\me^{-b\theta}\dl3\theta\\
-&amp;=\frac{\Gamma(a+1)}{b\Gamma(a)}\int_{0}^{\infty}\pdfgamma(\theta,a+1,b)\dl3\theta\\
-&amp;=\frac{a}{b},\\
-\Exp\qty[Y^2\mid a,b]&amp;= \int_{0}^{\infty}\theta^2\frac{b^a}{\Gamma(a)}\theta^{a-1}\me^{-b\theta}\dl3\theta\\
-&amp;=\int_{0}^{\infty}\frac{b^a}{\Gamma(a)}\theta^{(a+2)-1}\me^{-b\theta}\dl3\theta\\
-&amp;=\int_{0}^{\infty}\frac{\Gamma(a+2)}{b^2\Gamma(a)}\frac{b^{a+2}}{\Gamma(a+2)}\theta^{(a+2)-1}\me^{-b\theta}\dl3\theta\\
-&amp;=\frac{\Gamma(a+2)}{b^2\Gamma(a)}\int_{0}^{\infty}\pdfgamma(\theta,a+2,b)\dl3\theta\\
-&amp;=\frac{a(a+1)}{b^2},\\
-\Var\qty[Y\mid a, b]&amp;=\Exp\qty[Y^2\mid a, b]-\qty(\Exp\qty[Y\mid a, b])^2\\
-&amp;=\frac{a(a+1)}{b^2}-\frac{a^2}{b^2}=\frac{a}{b^2}.
-\end{split}
-\]</span></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Vague prior
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Assume <span class="math inline">\(\epsilon&gt;0\)</span>, then <span class="math inline">\(\distgamma(\epsilon, \epsilon)\)</span> represents a distribution without knowledge. Its mean is <span class="math inline">\(1\)</span> and variance is <span class="math inline">\(1/\epsilon\)</span> which is very large.</p>
-<p>With Poisson likelihood, the posterior mean is <span class="math inline">\(\dfrac{\epsilon+\sum y_i}{\epsilon+n}\approx \dfrac{\sum y_i}{n}\)</span> .</p>
-</div>
-</div>
 
 
 
@@ -721,13 +559,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../../contents/1/dist/poisson.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Poisson distribution</span></span>
+      <a href="../../../contents/1/dist/beta.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beta distribution</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../../contents/1/dist/normal.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Normal distribution</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../../contents/1/dist/poisson.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Poisson distribution</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

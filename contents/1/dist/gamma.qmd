@@ -14,7 +14,7 @@ $$
 Here 
 
 - $a$ is the **shape**.
-- $b$ is the **rate**.
+- $b$ is the **rate**, which also represents **effective sample size**.
 - $\lambda=\frac1b$ is the **scale**.
 :::
 
@@ -68,4 +68,13 @@ $$
 &=\frac{a(a+1)}{b^2}-\frac{a^2}{b^2}=\frac{a}{b^2}.
 \end{split}
 $$
+:::
+
+
+
+::: {.callout-note}
+# Vague prior
+Assume $\epsilon>0$, then $\distgamma(\epsilon, \epsilon)$ represents a distribution without knowledge. Its mean is $1$ and variance is $1/\epsilon$ which is very large.
+
+With Poisson likelihood, the posterior mean is $\dfrac{\epsilon+\sum y_i}{\epsilon+n}\approx \dfrac{\sum y_i}{n}$ .
 :::

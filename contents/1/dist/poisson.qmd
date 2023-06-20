@@ -78,10 +78,19 @@ $$
 ## Relations between Poisson distribution and binomial distribution
 Consider the number of events happen during a fixed length period. This is a Poisson process. Assume that the expectation of the distribution is $\theta$. This means that we could expect $\theta$ events happening during the time. The distribution of the process is $\pdfpois(y, \theta)$.
 
+We may understand the process in terms of binomial distribution. We could split the time period into $n$ pieces. The probability of that the event happens in one piece is $p$. Then this process can be described by a binomial distribution $\pdfbinom(y, n, p)$. Its expectation value is $np$. Then we have $np=\theta$. Therefore $p=\theta/n$.
 
 
+::: {#thm-poisson_binom}
+Poisson distribution is the limit of binomial distribution:
 
-Poisson distribution is the limit of binomial distribution
+$$
+\lim_{n\rightarrow\infty}\pdfbinom(y,n,\theta/n)=\pdfpois(y,\theta).
+$$
+:::
+
+::: {.callout-note collapse="true"}
+# Proof
 
 $$
 \begin{split}
@@ -92,4 +101,5 @@ $$
 &=\pdfpois(y,\theta).
 \end{split}
 $$
+:::
 

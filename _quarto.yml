@@ -7,7 +7,7 @@ number-sections: true
 toc-depth: 2
 number-depth: 4
 bibliography: book.bib
-csl: C:/Users/Xinli/Documents/ims.csl
+csl: ims.csl
 
 format:
   html:
@@ -33,12 +33,12 @@ book:
     - part: contents/1/notations.qmd
       chapters: 
         - contents/1/dist/binom.qmd
-    #     - contents/1/dist/beta.qmd
-    #     - contents/1/dist/geo.qmd
+        - contents/1/dist/beta.qmd
+        - contents/1/dist/chisquare.qmd
         - contents/1/dist/poisson.qmd
         - contents/1/dist/gamma.qmd
     #     - contents/1/dist/exp.qmd
-    #     - contents/1/dist/normal.qmd
+        - contents/1/dist/normal.qmd
     - part: contents/2/bayes.qmd
       chapters:
         - contents/2/bayesthm.qmd
